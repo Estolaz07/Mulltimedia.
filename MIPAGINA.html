@@ -3,63 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <title>Bancom Networks</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Menú superior */
+    .menu {
+      background-color: #1a1a1a;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      background: #333;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background: #555;
+    }
+
+    /* Botón agendar */
+    .btn-agendar {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-agendar:hover {
+      background-color: #0056b3;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+  </style>
 </head>
 
 <body style="background-color:#C0C0C0; text-align:center; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif;">
 
-  <img src="baner.png" alt="Mi Baner" style="width:100%; height:auto; display:block; margin-bottom:20px;"/>
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <div class="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#quienes">Quiénes Somos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#video">Video</a>
+  </div>
 
-  <h1 style="color:black; font-size:20px; margin-top:10px;">Bancom Networks</h1>
-  <p>Seguridad y redes de última generación</p>
+  <!-- SECCIÓN INICIO -->
+  <section id="inicio">
+    <img src="baner.png" alt="Mi Baner" style="width:100%; height:auto; display:block; margin-bottom:20px;"/>
 
-  <img src="logo.png" alt="logo" width="200" height="200"/>
+    <h1 style="color:black; font-size:20px; margin-top:10px;">Bancom Networks</h1>
+    <p>Seguridad y redes de última generación</p>
 
-  <h2>Quiénes somos</h2>
-  <p>
-    En <strong>Bancom Networks</strong> somos una empresa dedicada a ofrecer soluciones innovadoras en telecomunicaciones, 
-    administración de redes, sistemas de seguridad CCTV y servicio técnico. Nuestro propósito es brindar a hogares, empresas 
-    e instituciones la conectividad y protección que necesitan en un mundo cada vez más digital.
-  </p>
+    <img src="logo.png" alt="logo" width="200" height="200"/>
+  </section>
 
-  <img src="GIFT.gif" alt="logo" width="200" height="200"/>
+  <!-- SECCIÓN QUIÉNES SOMOS -->
+  <section id="quienes">
+    <h2>Quiénes somos</h2>
+    <p>
+      En <strong>Bancom Networks</strong> somos una empresa dedicada a ofrecer soluciones innovadoras en telecomunicaciones, 
+      administración de redes, sistemas de seguridad CCTV y servicio técnico. Nuestro propósito es brindar a hogares, empresas 
+      e instituciones la conectividad y protección que necesitan en un mundo cada vez más digital.
+    </p>
 
-  <h2>Misión</h2>
-  <p>
-    Nuestra misión es proporcionar soluciones tecnológicas confiables en seguridad, telecomunicaciones y redes de datos, 
-    que garanticen a nuestros clientes protección, conectividad y eficiencia en cada proyecto.
-  </p>
+    <img src="GIFT.gif" alt="gif" width="200" height="200"/>
+  </section>
 
-  <h2>Servicios</h2>
+  <!-- SECCIÓN SERVICIOS -->
+  <section id="servicios">
+    <h2>Servicios</h2>
 
-  <p>Diseño, instalación y administración de redes</p>
-  <img src="enlace.jpeg" alt="logo" width="200" height="200"/>
-  <img src="enlac.jpeg" alt="logo" width="200" height="200"/>
+    <p>Diseño, instalación y administración de redes</p>
+    <img src="enlace.jpeg" alt="red1" width="200" height="200"/>
+    <img src="enlac.jpeg" alt="red2" width="200" height="200"/>
 
-  <p>Implementación de sistemas de videovigilancia CCTV</p>
-  <img src="cctv.jpg" alt="logo" width="200" height="200"/>
+    <p>Implementación de sistemas de videovigilancia CCTV</p>
+    <img src="cctv.jpg" alt="cctv" width="200" height="200"/>
 
-  <p>Servicio técnico en hardware y software</p>
-  <img src="arreglo.jpg" alt="logo" width="200" height="200"/>
+    <p>Servicio técnico en hardware y software</p>
+    <img src="arreglo.jpg" alt="tecnico" width="200" height="200"/>
 
-
-<a href="https://wa.me/573235791135" target="_blank" 
-   style="position:fixed; bottom:20px; right:20px; background-color:#25D366; border-radius:50%; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.3); z-index:1000;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-       alt="WhatsApp" width="50" height="50"/>
+    <!-- BOTÓN AGENDAR SERVICIO -->
+    <br>
+    <a href="agendar.html" class="btn-agendar">Agendar Servicio</a>
+  </section>
+<a href="formulario.html" class="btn-formulario">
+    Formulario
 </a>
- 
 
 
-  <h2>Contacto</h2>
-  <p>Email: ivson_98@hotmail.com</p>
-  <p>Teléfono: +57 3235791135</p>
-  <p>Ubicación: Cerrito, Santander - Colombia</p>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/573235791135" target="_blank" 
+     style="position:fixed; bottom:20px; right:20px; background-color:#25D366; border-radius:50%; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.3); z-index:1000;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp" width="50" height="50"/>
+  </a>
 
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: ivson_98@hotmail.com</p>
+    <p>Teléfono: +57 3235791135</p>
+    <p>Ubicación: Cerrito, Santander - Colombia</p>
+  </section>
 
+  <!-- SECCIÓN VIDEO -->
+  <section id="video">
+    <h2>Video</h2>
+    <video src="video.mp4" width="320" controls autoplay loop muted></video>
+  </section>
 
   <footer>
     <p>2025 Bancom Networks - Todos los derechos reservados</p>
   </footer>
-  <video src="video.mp4" width="320" controls autoplay loop muted></video>
+
 </body>
 </html>

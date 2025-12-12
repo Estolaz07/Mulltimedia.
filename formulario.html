@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Solicitud</title>
+</head>
+
+<body>
+
+<form id="formBancom" action="procesar_formulario.php" method="POST" style="max-width: 700px; margin: auto; font-family: Arial, sans-serif; background: #f8f8f8; padding: 20px; border-radius: 10px;">
+  <h2 style="text-align: center; color: #004aad;">Formulario de Solicitud de Soporte Técnico</h2>
+  <p style="text-align: center; color: #555;">Por favor completa la siguiente información para poder atenderte mejor.</p>
+  
+  <label for="nombre">1. Nombre completo *</label>
+  <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 8px; margin-bottom: 12px;">
+  
+  <label for="empresa">2. Empresa o institución</label>
+  <input type="text" id="empresa" name="empresa" style="width: 100%; padding: 8px; margin-bottom: 12px;">
+
+  <label for="email">3. Correo electrónico *</label>
+  <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 12px;">
+
+  <label for="telefono">4. Teléfono de contacto *</label>
+  <input type="tel" id="telefono" name="telefono" required style="width: 100%; padding: 8px; margin-bottom: 12px;">
+
+  <label for="servicio">5. Tipo de servicio requerido *</label>
+  <select id="servicio" name="servicio" required style="width: 100%; padding: 8px; margin-bottom: 12px;">
+    <option value="">-- Selecciona una opción --</option>
+    <option value="soporte">Soporte técnico</option>
+    <option value="radioenlace">Instalación de radioenlace</option>
+    <option value="redes">Diseño/instalación de red LAN/WLAN</option>
+    <option value="fibra">Implementación de fibra óptica</option>
+    <option value="asesoria">Asesoría en telecomunicaciones</option>
+  </select>
+
+  <label for="descripcion">6. Describe el problema o solicitud *</label>
+  <textarea id="descripcion" name="descripcion" rows="4" required style="width: 100%; padding: 8px; margin-bottom: 12px;"></textarea>
+
+  <label for="ubicacion">7. Ubicación o dirección del sitio *</label>
+  <input type="text" id="ubicacion" name="ubicacion" required style="width: 100%; padding: 8px; margin-bottom: 12px;">
+
+  <label for="infraestructura">8. ¿Qué tipo de infraestructura o enlace tienes actualmente?</label>
+  <select id="infraestructura" name="infraestructura" style="width: 100%; padding: 8px; margin-bottom: 12px;">
+    <option value="">-- Selecciona una opción --</option>
+    <option value="radioenlace">Radioenlace punto a punto</option>
+    <option value="fibra">Fibra óptica</option>
+    <option value="cobre">Cableado de cobre</option>
+    <option value="inalambrica">Red inalámbrica</option>
+    <option value="ninguno">No cuento con infraestructura</option>
+  </select>
+
+  <label>9. Nivel de urgencia *</label><br>
+  <input type="radio" id="baja" name="urgencia" value="baja" required>
+  <label for="baja">Baja</label><br>
+
+  <input type="radio" id="media" name="urgencia" value="media">
+  <label for="media">Media</label><br>
+
+  <input type="radio" id="alta" name="urgencia" value="alta">
+  <label for="alta">Alta</label><br><br>
+
+  <label for="referencia">10. ¿Cómo nos conoció?</label>
+  <select id="referencia" name="referencia" style="width: 100%; padding: 8px; margin-bottom: 12px;">
+    <option value="">-- Selecciona una opción --</option>
+    <option value="recomendacion">Recomendación</option>
+    <option value="internet">Búsqueda en internet</option>
+    <option value="redes">Redes sociales</option>
+    <option value="publicidad">Publicidad</option>
+    <option value="otro">Otro</option>
+  </select>
+
+  <button type="submit" style="background-color: #004aad; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+    Enviar solicitud
+  </button>
+
+</form>
+
+<!-- SCRIPT DE REDIRECCIÓN -->
+<script>
+document.getElementById("formBancom").addEventListener("submit", function(e) {
+    e.preventDefault(); // Evita que la página desaparezca
+    alert("Formulario enviado correctamente. ¡Gracias por contactarnos!");
+    window.location.href = "MiPaginaa.html"; // Redirige a tu página principal
+});
+</script>
+
+</body>
+</html>

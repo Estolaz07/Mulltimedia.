@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Servicio</title>
+
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 420px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            background: #007bff;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .alerta {
+            margin-top: 20px;
+            padding: 12px;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            display: none;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Agendar un Servicio</h2>
+
+        <form id="formAgenda">
+
+            <label>Nombre completo</label>
+            <input type="text" name="nombre" required>
+
+            <label>Correo electrónico</label>
+            <input type="email" name="correo" required>
+
+            <label>Teléfono</label>
+            <input type="text" name="telefono" required>
+
+            <label>Tipo de servicio</label>
+            <select name="servicio" required>
+                <option value="">Seleccione...</option>
+                <option>Instalación</option>
+                <option>Mantenimiento</option>
+                <option>Soporte Técnico</option>
+            </select>
+
+            <label>Descripción</label>
+            <textarea name="descripcion" rows="4" required></textarea>
+
+            <button type="submit">Enviar Solicitud</button>
+
+        </form>
+
+        <div id="mensajeExito" class="alerta">
+            ¡Formulario enviado con éxito! ✔ <br> Redirigiendo...
+        </div>
+
+    </div>
+
+    <script>
+        const form = document.getElementById("formAgenda");
+        const mensaje = document.getElementById("mensajeExito");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            mensaje.style.display = "block"; 
+            form.reset();
+
+            // ⏳ Espera 2 segundos y redirige
+            setTimeout(() => {
+                window.location.href = "MiPagina.html"; 
+                // 🔧 CAMBIA "index.html" POR TU PÁGINA REAL
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>

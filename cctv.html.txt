@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CCTV y Seguridad - Bancom Networks</title>
+<style>
+body{font-family:Arial; margin:0; background:#e3e7ee;}
+.header{background:#0b1526; color:white; padding:25px; text-align:center;}
+section{padding:50px 10%; text-align:center;}
+.grid{display:flex; flex-wrap:wrap; justify-content:center; gap:30px;}
+.card{background:white; padding:20px; border-radius:12px; width:280px; box-shadow:0 4px 10px rgba(0,0,0,.2);}
+.btn{background:#1f3b66; padding:12px 20px; color:white; text-decoration:none; border-radius:8px; display:inline-block; margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Seguridad & CCTV</h1>
+<p>Monitoreo profesional para tu hogar o empresa</p>
+</div>
+
+<section>
+<h2>Servicios disponibles</h2>
+
+<div class="grid">
+<div class="card"><h3>Instalación de cámaras</h3><p>Analógicas e IP hasta 4K.</p></div>
+<div class="card"><h3>Grabadores NVR / DVR</h3><p>Configuración completa.</p></div>
+<div class="card"><h3>Acceso remoto</h3><p>Visualización desde celular.</p></div>
+<div class="card"><h3>Mantenimiento</h3><p>Soporte y limpieza preventiva.</p></div>
+</div>
+
+<a class="btn" href="formulario.html">Solicitar servicio</a>
+<a class="btn" href="index.html">Volver al inicio</a>
+
+</section>
+</body>
+</html>
